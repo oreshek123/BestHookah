@@ -1,51 +1,49 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-ng-app="website">
 <head>
 
 
     <meta charset="utf-8">
-    <title>Home</title>
+    <title>Menu</title>
+    <link rel="SHORTCUT ICON" href="../../Content/mt-demo/74300/74314/mt-content/uploads/2018/11/favicon29e4.ico" type="image/vnd.microsoft.icon" />
 
+    <link rel="canonical" href="index.html" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../../Content/mt-includes/css/assets.min192b.css" />
-    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../Content/mt-includes/css/assets.min192b.css?_build=1541769650" />
     <link rel="stylesheet" href="../../Content/mt-demo/74300/74314/mt-content/assets/stylesd6c9.css" id="moto-website-style" />
-    @RenderSection("styles", false)
 </head>
 <body class="moto-background">
     <div class="page">
         <!--Header area start-->
-
-        @Html.Partial("_HeaderPartial")
-
+        @Html.Partial("_ContentHeaderPartial")
         <!--Header area end-->
         <!--Client area start-->
-        <section id="section-content" class="content page-1 moto-section" data-widget="section" data-container="section">
+
+        <section id="section-content" class="content page-11 moto-section" data-widget="section" data-container="section">
             @RenderBody()
             <!--Client area end-->
             @Html.Partial("_ReservationPartial")
         </section>
     </div>
-
-
     <!--Footer area start-->
     @Html.Partial("_FooterPartial")
-    <!--Footer area end-->
-
+<!--Footer area end-->
 
     <div data-moto-back-to-top-button class="moto-back-to-top-button">
         <a ng-click="toTop($event)" class="moto-back-to-top-button-link">
             <span class="moto-back-to-top-button-icon fa"></span>
         </a>
     </div>
-    <script src="~/Scripts/bootstrap.min.js"></script>
-    <script src="../../Scripts/js/website.assets.min7568.js?_build=1541769711" type="text/javascript" data-cfasync="false"></script>
+
+
+    <script src="../../Scripts/js/website.assets.min7568.js" type="text/javascript" data-cfasync="false"></script>
     <script type="text/javascript" data-cfasync="false">
-        var websiteConfig = websiteConfig || {};
-        websiteConfig.address = 'index.html';
+    var websiteConfig = websiteConfig || {};
+        websiteConfig.address = '../index.html';
         websiteConfig.addressHash = '3508014783040fc5aa6b8b0c6adc1099';
-        websiteConfig.apiUrl = 'api.json';
+        websiteConfig.apiUrl = '../api.json';
         websiteConfig.preferredLocale = 'en_US';
         websiteConfig.preferredLanguage = websiteConfig.preferredLocale.substring(0, 2);
         websiteConfig.back_to_top_button = { "topOffset": 300, "animationTime": 500, "type": "theme" };
@@ -53,10 +51,6 @@
         websiteConfig.lazy_loading = { "enabled": true };
         websiteConfig.cookie_notification = { "enabled": false, "content": "<p class=\"moto-text_normal\">This website uses cookies to ensure you get the best experience on our website.<\/p>", "content_hash": "6200d081e0d72ab7f5a8fe78d961c3ec" };
         angular.module('website.plugins', []);</script>
-    <script src="../../Scripts/js/website.min2c01.js?_build=1541769699" type="text/javascript" data-cfasync="false"></script>
-    <script type="text/javascript">$.fn.motoGoogleMap.setApiKey('AIzaSyAk8PGBXexyvCl_XGQDHqTfrNhZ1zYHFTI');</script>
-
-
-
+    <script src="../../Scripts/js/website.min2c01.js" type="text/javascript" data-cfasync="false"></script>
 </body>
 </html>
