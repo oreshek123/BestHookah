@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28010.2019
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BestHookah", "BestHookah\BestHookah.csproj", "{BF20D492-9B6F-4C7E-8499-B5B298921FBC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BestHookah.DAL", "BestHookah.DAL\BestHookah.DAL.csproj", "{FC2D6E31-06CC-4183-8823-37A4BEB5047C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BestHookah.BLL", "BestHookah.BLL\BestHookah.BLL.csproj", "{A4E4FB35-4035-422A-B4B3-27B2479FEC65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{BF20D492-9B6F-4C7E-8499-B5B298921FBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF20D492-9B6F-4C7E-8499-B5B298921FBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF20D492-9B6F-4C7E-8499-B5B298921FBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC2D6E31-06CC-4183-8823-37A4BEB5047C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC2D6E31-06CC-4183-8823-37A4BEB5047C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC2D6E31-06CC-4183-8823-37A4BEB5047C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC2D6E31-06CC-4183-8823-37A4BEB5047C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4E4FB35-4035-422A-B4B3-27B2479FEC65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4E4FB35-4035-422A-B4B3-27B2479FEC65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4E4FB35-4035-422A-B4B3-27B2479FEC65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4E4FB35-4035-422A-B4B3-27B2479FEC65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

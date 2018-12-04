@@ -1,0 +1,52 @@
+﻿@model IEnumerable<BestHookah.DAL.RezervTable>
+
+@{
+    ViewBag.Title = "ReservationList";
+    Layout = "~/Views/Shared/_LayoutContent.cshtml";
+}
+
+<h2>ReservationList</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Message)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Message)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TableId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TableId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TableId })
+        </td>
+    </tr>
+}
+
+</table>

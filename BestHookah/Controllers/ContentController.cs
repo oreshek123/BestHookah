@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BestHookah.BLL;
 
 namespace BestHookah.Controllers
 {
@@ -12,6 +13,12 @@ namespace BestHookah.Controllers
         public ActionResult Menu()
         {
             return View();
+        }
+
+        public ActionResult Gallery()
+        {
+            GalleryService service = new GalleryService();
+            return View(service.GetGalleryItem());
         }
     }
 }

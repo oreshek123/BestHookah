@@ -806,3 +806,15 @@
 </div>
 </div>
 </div>
+@Scripts.Render("~/bundles/jquery")
+<script src="~/Content/bootstrap-notify.min.js"></script>
+<script>
+    @if (ViewBag.Message is string message)
+    {
+        <text>
+            $.notify("@message", {
+                newest_on_top: true
+            });
+        </text>
+    }
+</script>

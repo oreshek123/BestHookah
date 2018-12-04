@@ -1,0 +1,50 @@
+﻿@model IEnumerable<BestHookah.DAL.GalleryItem>
+
+@{
+    ViewBag.Title = "GalleryList";
+    Layout = "~/Views/Shared/_LayoutContent.cshtml";
+}
+
+<div class="container-fluid">
+<div class="col-md-offset-3 col-md-7">
+    <h2 class="h2">GalleryList</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "CreateGalleryItem")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.GalleryItemName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PicturePath)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GalleryItemName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PicturePath)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "EditGalleryItem", new { id=item.GalleryItemId }) |
+                    @Html.ActionLink("Details", "DetailsGalleryItem", new { id=item.GalleryItemId }) |
+                    @Html.ActionLink("Delete", "DeleteGalleryItem", new { id=item.GalleryItemId })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+</div>

@@ -1,5 +1,4 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-ng-app="website">
 <head>
 
@@ -23,9 +22,10 @@
         <!--Client area start-->
         <section id="section-content" class="content page-1 moto-section" data-widget="section" data-container="section">
             @RenderBody()
-            <!--Client area end-->
+
             @Html.Partial("_ReservationPartial")
         </section>
+        <!--Client area end-->
     </div>
 
 
@@ -34,11 +34,13 @@
     <!--Footer area end-->
 
 
-    <div data-moto-back-to-top-button class="moto-back-to-top-button">
-        <a ng-click="toTop($event)" class="moto-back-to-top-button-link">
-            <span class="moto-back-to-top-button-icon fa"></span>
-        </a>
-    </div>
+<div data-moto-back-to-top-button class="moto-back-to-top-button">
+    <a ng-click="toTop($event)" class="moto-back-to-top-button-link">
+        <span class="moto-back-to-top-button-icon fa"></span>
+    </a>
+</div>
+@Scripts.Render("~/bundles/jquery")
+    <script src="~/Content/bootstrap-notify.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="../../Scripts/js/website.assets.min7568.js?_build=1541769711" type="text/javascript" data-cfasync="false"></script>
     <script type="text/javascript" data-cfasync="false">

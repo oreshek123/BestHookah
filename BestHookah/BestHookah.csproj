@@ -45,6 +45,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -147,6 +153,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\ContentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -155,6 +162,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-notify.min.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -1660,6 +1668,7 @@
     <Content Include="Content\mt-demo\74300\74314\mt-content\uploads\2018\11\mt-1616-hookah-_bar-img-7.jpg" />
     <Content Include="Content\mt-demo\74300\74314\mt-content\uploads\2018\11\mt-1616-hookah-_bar-img-8.jpg" />
     <Content Include="Content\mt-demo\74300\74314\mt-content\uploads\2018\11\mt-1616-menu-img-1.jpg" />
+    <Content Include="Content\mt-demo\74300\74314\mt-content\uploads\2018\11\mt-1616-menu-img-13.jpg" />
     <Content Include="Content\mt-demo\74300\74314\mt-content\uploads\2018\11\mt-1616-menu-img-2.jpg" />
     <Content Include="Content\mt-demo\74300\74314\mt-content\uploads\2018\11\mt-1616-menu-img-3.jpg" />
     <Content Include="Content\mt-includes\css\assets.min192b.css" />
@@ -1773,6 +1782,13 @@
     <Content Include="Views\Shared\_ContentHeaderPartial.cshtml" />
     <Content Include="Views\Shared\_ReservationPartial.cshtml" />
     <Content Include="Views\Shared\_FooterPartial.cshtml" />
+    <Content Include="Views\Admin\ReservationList.cshtml" />
+    <Content Include="Views\Content\Gallery.cshtml" />
+    <Content Include="Views\Admin\GalleryList.cshtml" />
+    <Content Include="Views\Admin\CreateGalleryItem.cshtml" />
+    <Content Include="Views\Admin\EditGalleryItem.cshtml" />
+    <Content Include="Views\Admin\DetailsGalleryItem.cshtml" />
+    <Content Include="Views\Admin\DeleteGalleryItem.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1790,6 +1806,16 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BestHookah.BLL\BestHookah.BLL.csproj">
+      <Project>{a4e4fb35-4035-422a-b4b3-27b2479fec65}</Project>
+      <Name>BestHookah.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BestHookah.DAL\BestHookah.DAL.csproj">
+      <Project>{fc2d6e31-06cc-4183-8823-37a4beb5047c}</Project>
+      <Name>BestHookah.DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

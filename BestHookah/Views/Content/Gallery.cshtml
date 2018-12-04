@@ -1,0 +1,225 @@
+﻿@using BestHookah.DAL
+@model List<BestHookah.DAL.GalleryItem>
+@{
+    ViewBag.Title = "Gallery";
+    Layout = "~/Views/Shared/_LayoutContent.cshtml";
+}
+
+@section styles{ 
+<style>
+    #wid_1542024837_q11zi3g36 .moto-widget-tile-gallery__items-wrapper {
+        column-gap:20px;
+        column-count:3;
+    }
+
+    #wid_1542024837_q11zi3g36 .moto-widget-tile-gallery__item-wrapper {
+        padding-bottom:20px;
+    }
+</style>
+}
+<section id="section-content" class="content page-13 moto-section" data-widget="section" data-container="section">
+    <div class="moto-widget moto-widget-block moto-bg-color2_3 moto-spacing-top-large moto-spacing-right-auto moto-spacing-bottom-large moto-spacing-left-auto" data-widget="block" data-spacing="lala" style="background-image:url(../../Content/mt-demo/74300/74314/mt-content/uploads/2018/11/mt-1616-content-bg-1.jpg);background-position:center;background-repeat:no-repeat;background-size:cover;" data-bg-image="2018/11/mt-1616-content-bg-1.jpg" data-bg-position="center">
+
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="moto-cell col-sm-12" data-container="container">
+
+
+                    <div class="moto-widget moto-widget-row row-fixed moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-grid-type="sm" data-widget="row" data-spacing="aaaa" style="" data-bg-position="left top">
+
+
+                        <div class="container-fluid">
+                            <div class="row" data-container="container">
+
+
+                                <div class="moto-widget moto-widget-row__column moto-cell col-sm-12 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+
+                                    <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="aaaa" data-animation="">
+                                        <div class="moto-widget-text-content moto-widget-text-editable"><h1 class="moto-text_system_5">GALLERY</h1></div>
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div><div class="moto-widget moto-widget-block moto-spacing-top-large moto-spacing-right-auto moto-spacing-bottom-large moto-spacing-left-auto" data-widget="block" data-spacing="lala" style="" data-bg-position="left top">
+
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="moto-cell col-sm-12" data-container="container">
+
+                    <div class="moto-widget moto-widget-row row-fixed moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-grid-type="sm" data-widget="row" data-spacing="aaaa" style="" data-bg-position="left top">
+
+
+                        <div class="container-fluid">
+                            <div class="row" data-container="container">
+
+
+                                <div class="moto-widget moto-widget-row__column moto-cell col-sm-12 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+                                    <div id="wid_1542024837_q11zi3g36" data-widget-id="wid_1542024837_q11zi3g36" class="moto-widget moto-widget-tile-gallery moto-preset-2 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto  " data-widget="tile_gallery" data-preset="2">
+                                        <div class="moto-widget-tile-gallery__wrapper">
+                                            <div class="moto-widget-tile-gallery__items-wrapper" data-moto-init-lightbox-gallery="" data-tile-gallery-justify-height="">
+                                                @*<div class="moto-widget-tile-gallery__item-wrapper">
+                                                    <div class="moto-widget-tile-gallery__item" data-moto-lightbox-item="">
+                                                        <a href="../../Content/mt-demo/74300/74314/mt-content/uploads/2018/11/mt-1616-gallery-img-9bg.jpg" data-action="lightbox" class="moto-widget-tile-gallery__item-link moto-link" data-moto-lightbox-link="">
+                                                            <img class="moto-widget-tile-gallery__item-image" src="../../Content/mt-demo/74300/74314/mt-content/uploads/2018/11/mt-1616-gallery-img-9.jpg" alt="mt-1616-gallery-img-9.jpg" />
+                                                        </a>
+                                                        <div class="moto-widget-tile-gallery__item-layer">
+                                                            <span class="moto-widget-tile-gallery__item-layer-icon fa"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>*@
+                                                
+                                                
+                                                @foreach (GalleryItem item in Model)
+                                                {
+                                                    <div class="moto-widget-tile-gallery__item-wrapper">
+                                                        <div class="moto-widget-tile-gallery__item" data-moto-lightbox-item="">
+                                                            <a href="@item.PicturePath" data-action="lightbox" class="moto-widget-tile-gallery__item-link moto-link" data-moto-lightbox-link="">
+                                                                <img class="moto-widget-tile-gallery__item-image" src="@item.PicturePath" alt="@item.GalleryItemName" />
+                                                            </a>
+                                                            <div class="moto-widget-tile-gallery__item-layer">
+                                                                <span class="moto-widget-tile-gallery__item-layer-icon fa"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                }
+
+                                                @*<div class="moto-widget-tile-gallery__item-wrapper">
+                                                    <div class="moto-widget-tile-gallery__item" data-moto-lightbox-item="">
+                                                        <a href="../../Content/mt-demo/74300/74314/mt-content/uploads/2018/11/mt-1616-gallery-img-1bg.jpg" data-action="lightbox" class="moto-widget-tile-gallery__item-link moto-link" data-moto-lightbox-link="">
+                                                            <img class="moto-widget-tile-gallery__item-image" src="../../Content/mt-demo/74300/74314/mt-content/uploads/2018/11/mt-1616-gallery-img-1.jpg" alt="mt-1616-gallery-img-1.jpg" />
+                                                        </a>
+                                                        <div class="moto-widget-tile-gallery__item-layer">
+                                                            <span class="moto-widget-tile-gallery__item-layer-icon fa"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="moto-widget-tile-gallery__item-wrapper">
+                                                    <div class="moto-widget-tile-gallery__item" data-moto-lightbox-item="">
+                                                        <a href="../../Content/mt-demo/74300/74314/mt-content/uploads/2018/11/mt-1616-gallery-img-2bg.jpg" data-action="lightbox" class="moto-widget-tile-gallery__item-link moto-link" data-moto-lightbox-link="">
+                                                            <img class="moto-widget-tile-gallery__item-image" src="../../Content/mt-demo/74300/74314/mt-content/uploads/2018/11/mt-1616-gallery-img-2.jpg" alt="mt-1616-gallery-img-2.jpg" />
+                                                        </a>
+                                                        <div class="moto-widget-tile-gallery__item-layer">
+                                                            <span class="moto-widget-tile-gallery__item-layer-icon fa"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="moto-widget-tile-gallery__item-wrapper">
+                                                    <div class="moto-widget-tile-gallery__item" data-moto-lightbox-item="">
+                                                        <a href="../../Content/mt-demo/74300/74314/mt-content/uploads/2018/11/mt-1616-gallery-img-3bg.jpg" data-action="lightbox" class="moto-widget-tile-gallery__item-link moto-link" data-moto-lightbox-link="">
+                                                            <img class="moto-widget-tile-gallery__item-image" src="../../Content/mt-demo/74300/74314/mt-content/uploads/2018/11/mt-1616-gallery-img-3bg.jpg" alt="mt-1616-gallery-img-3bg.jpg" />
+                                                        </a>
+                                                        <div class="moto-widget-tile-gallery__item-layer">
+                                                            <span class="moto-widget-tile-gallery__item-layer-icon fa"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="moto-widget-tile-gallery__item-wrapper">
+                                                    <div class="moto-widget-tile-gallery__item" data-moto-lightbox-item="">
+                                                        <a href="../../Content/mt-demo/74300/74314/mt-content/uploads/2018/11/mt-1616-gallery-img-4bg.jpg" data-action="lightbox" class="moto-widget-tile-gallery__item-link moto-link" data-moto-lightbox-link="">
+                                                            <img class="moto-widget-tile-gallery__item-image" src="../../Content/mt-demo/74300/74314/mt-content/uploads/2018/11/mt-1616-gallery-img-4.jpg" alt="mt-1616-gallery-img-4.jpg" />
+                                                        </a>
+                                                        <div class="moto-widget-tile-gallery__item-layer">
+                                                            <span class="moto-widget-tile-gallery__item-layer-icon fa"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="moto-widget-tile-gallery__item-wrapper">
+                                                    <div class="moto-widget-tile-gallery__item" data-moto-lightbox-item="">
+                                                        <a href="../../Content/mt-demo/74300/74314/mt-content/uploads/2018/11/mt-1616-gallery-img-12bg.jpg" data-action="lightbox" class="moto-widget-tile-gallery__item-link moto-link" data-moto-lightbox-link="">
+                                                            <img class="moto-widget-tile-gallery__item-image" src="../../Content/mt-demo/74300/74314/mt-content/uploads/2018/11/mt-1616-gallery-img-12.jpg" alt="mt-1616-gallery-img-12.jpg" />
+                                                        </a>
+                                                        <div class="moto-widget-tile-gallery__item-layer">
+                                                            <span class="moto-widget-tile-gallery__item-layer-icon fa"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="moto-widget-tile-gallery__item-wrapper">
+                                                    <div class="moto-widget-tile-gallery__item" data-moto-lightbox-item="">
+                                                        <a href="../../Content/mt-demo/74300/74314/mt-content/uploads/2018/11/mt-1616-gallery-img-5bg.jpg" data-action="lightbox" class="moto-widget-tile-gallery__item-link moto-link" data-moto-lightbox-link="">
+                                                            <img class="moto-widget-tile-gallery__item-image" src="../../Content/mt-demo/74300/74314/mt-content/uploads/2018/11/mt-1616-gallery-img-5bg.jpg" alt="mt-1616-gallery-img-5bg.jpg" />
+                                                        </a>
+                                                        <div class="moto-widget-tile-gallery__item-layer">
+                                                            <span class="moto-widget-tile-gallery__item-layer-icon fa"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="moto-widget-tile-gallery__item-wrapper">
+                                                    <div class="moto-widget-tile-gallery__item" data-moto-lightbox-item="">
+                                                        <a href="../../Content/mt-demo/74300/74314/mt-content/uploads/2018/11/mt-1616-gallery-img-6bg.jpg" data-action="lightbox" class="moto-widget-tile-gallery__item-link moto-link" data-moto-lightbox-link="">
+                                                            <img class="moto-widget-tile-gallery__item-image" src="../../Content/mt-demo/74300/74314/mt-content/uploads/2018/11/mt-1616-gallery-img-6.jpg" alt="mt-1616-gallery-img-6.jpg" />
+                                                        </a>
+                                                        <div class="moto-widget-tile-gallery__item-layer">
+                                                            <span class="moto-widget-tile-gallery__item-layer-icon fa"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="moto-widget-tile-gallery__item-wrapper">
+                                                    <div class="moto-widget-tile-gallery__item" data-moto-lightbox-item="">
+                                                        <a href="../../Content/mt-demo/74300/74314/mt-content/uploads/2018/11/mt-1616-gallery-img-7bg.jpg" data-action="lightbox" class="moto-widget-tile-gallery__item-link moto-link" data-moto-lightbox-link="">
+                                                            <img class="moto-widget-tile-gallery__item-image" src="../../Content/mt-demo/74300/74314/mt-content/uploads/2018/11/mt-1616-gallery-img-7bg.jpg" alt="mt-1616-gallery-img-7bg.jpg" />
+                                                        </a>
+                                                        <div class="moto-widget-tile-gallery__item-layer">
+                                                            <span class="moto-widget-tile-gallery__item-layer-icon fa"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="moto-widget-tile-gallery__item-wrapper">
+                                                    <div class="moto-widget-tile-gallery__item" data-moto-lightbox-item="">
+                                                        <a href="../../Content/mt-demo/74300/74314/mt-content/uploads/2018/11/mt-1616-gallery-img-11bg.jpg" data-action="lightbox" class="moto-widget-tile-gallery__item-link moto-link" data-moto-lightbox-link="">
+                                                            <img class="moto-widget-tile-gallery__item-image" src="../../Content/mt-demo/74300/74314/mt-content/uploads/2018/11/mt-1616-gallery-img-11.jpg" alt="mt-1616-gallery-img-11.jpg" />
+                                                        </a>
+                                                        <div class="moto-widget-tile-gallery__item-layer">
+                                                            <span class="moto-widget-tile-gallery__item-layer-icon fa"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="moto-widget-tile-gallery__item-wrapper">
+                                                    <div class="moto-widget-tile-gallery__item" data-moto-lightbox-item="">
+                                                        <a href="../../Content/mt-demo/74300/74314/mt-content/uploads/2018/11/mt-1616-gallery-img-8bg.jpg" data-action="lightbox" class="moto-widget-tile-gallery__item-link moto-link" data-moto-lightbox-link="">
+                                                            <img class="moto-widget-tile-gallery__item-image" src="../../Content/mt-demo/74300/74314/mt-content/uploads/2018/11/mt-1616-gallery-img-8.jpg" alt="mt-1616-gallery-img-8.jpg" />
+                                                        </a>
+                                                        <div class="moto-widget-tile-gallery__item-layer">
+                                                            <span class="moto-widget-tile-gallery__item-layer-icon fa"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="moto-widget-tile-gallery__item-wrapper">
+                                                    <div class="moto-widget-tile-gallery__item" data-moto-lightbox-item="">
+                                                        <a href="../../Content/mt-demo/74300/74314/mt-content/uploads/2018/11/mt-1616-gallery-img-10bg.jpg" data-action="lightbox" class="moto-widget-tile-gallery__item-link moto-link" data-moto-lightbox-link="">
+                                                            <img class="moto-widget-tile-gallery__item-image" src="../../Content/mt-demo/74300/74314/mt-content/uploads/2018/11/mt-1616-gallery-img-10.jpg" alt="mt-1616-gallery-img-10.jpg" />
+                                                        </a>
+                                                        <div class="moto-widget-tile-gallery__item-layer">
+                                                            <span class="moto-widget-tile-gallery__item-layer-icon fa"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>*@
+
+                                            </div>                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
