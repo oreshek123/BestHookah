@@ -1,7 +1,7 @@
-﻿@model IEnumerable<BestHookah.DAL.GalleryItem>
+﻿@model BestHookah.DAL.Offer
 
 @{
-    ViewBag.Title = "GalleryList";
+    ViewBag.Title = "DeleteOffer";
     Layout = "~/Views/Shared/_LayoutContent.cshtml";
 }
 <section id="section-content" class="content page-15 moto-section" data-widget="section" data-container="section">
@@ -25,7 +25,7 @@
 
 
                                     <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="aaaa" data-animation="">
-                                        <div class="moto-widget-text-content moto-widget-text-editable"><h1 class="moto-text_system_5">GALLERY LIST</h1></div>
+                                        <div class="moto-widget-text-content moto-widget-text-editable"><h1 class="moto-text_system_5">DELETE OFFER</h1></div>
                                     </div>
 
 
@@ -43,43 +43,49 @@
     </div>
 </section>
 <div class="container-fluid">
-<div class="col-md-offset-3 col-md-7">
-    <p class="h3">
-        @Html.ActionLink("Create New", "CreateGalleryItem")
-    </p>
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.GalleryItemName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PicturePath)
-            </th>
-            <th>
+<div class="col-md-offset-3 col-md-6">
+   
+
+    <h3 class="h3">Are you sure you want to delete this?</h3>
+    <div>
+        <h4 class="h4">Offer</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+
+            <dt>
                 @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th></th>
-        </tr>
+            </dt>
 
-        @foreach (var item in Model) {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.GalleryItemName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.PicturePath)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Description)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "EditGalleryItem", new { id=item.GalleryItemId }) |
-                    @Html.ActionLink("Details", "DetailsGalleryItem", new { id=item.GalleryItemId }) |
-                    @Html.ActionLink("Delete", "DeleteGalleryItem", new { id=item.GalleryItemId })
-                </td>
-            </tr>
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.FinishDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FinishDate)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "OffersList")
+            </div>
         }
-
-    </table>
+    </div>
 </div>
 </div>

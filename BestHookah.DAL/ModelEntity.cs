@@ -14,5 +14,6 @@ namespace BestHookah.DAL
         }
         public DbSet<RezervTable> RezervTables { get; set; }
         public DbSet<GalleryItem> GalleryItems { get; set; }
+        public DbSet<Offer> Offers { get; set; }
     }
 }

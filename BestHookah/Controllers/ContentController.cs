@@ -20,5 +20,11 @@ namespace BestHookah.Controllers
             GalleryService service = new GalleryService();
             return View(service.GetGalleryItem());
         }
+
+        public ActionResult Offers()
+        {
+            OffersService service = new OffersService();
+            return View(service.GetOffersList());
+        }
     }
 }

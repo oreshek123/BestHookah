@@ -1,0 +1,287 @@
+﻿@using BestHookah.DAL
+@model List<BestHookah.DAL.Offer>
+@{
+    ViewBag.Title = "Offers";
+    Layout = "~/Views/Shared/_LayoutContent.cshtml";
+}
+<section id="section-content" class="content page-15 moto-section" data-widget="section" data-container="section">
+<div class="moto-widget moto-widget-block moto-bg-color2_3 moto-spacing-top-large moto-spacing-right-auto moto-spacing-bottom-large moto-spacing-left-auto" data-widget="block" data-spacing="lala" style="background-image:url(../../Content/mt-demo/74300/74314/mt-content/uploads/2018/11/mt-1616-content-bg-1.jpg);background-position:center;background-repeat:no-repeat;background-size:cover;" data-bg-image="2018/11/mt-1616-content-bg-1.jpg" data-bg-position="center">
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="moto-cell col-sm-12" data-container="container">
+
+
+                <div class="moto-widget moto-widget-row row-fixed moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-grid-type="sm" data-widget="row" data-spacing="aaaa" style="" data-bg-position="left top">
+
+
+                    <div class="container-fluid">
+                        <div class="row" data-container="container">
+
+
+                            <div class="moto-widget moto-widget-row__column moto-cell col-sm-12 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+
+                                <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="aaaa" data-animation="">
+                                    <div class="moto-widget-text-content moto-widget-text-editable"><h1 class="moto-text_system_5">OFFERS</h1></div>
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="moto-widget moto-widget-block moto-spacing-top-large moto-spacing-right-auto moto-spacing-bottom-large moto-spacing-left-auto" data-widget="block" data-spacing="lala" style="" data-bg-position="left top">
+
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="moto-cell col-sm-12" data-container="container">
+
+
+                    <div class="moto-widget moto-widget-row row-fixed moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-grid-type="sm" data-widget="row" data-spacing="aaaa" style="" data-bg-position="left top">
+
+
+                        <div class="container-fluid">
+                            <div class="row" data-container="container">
+
+
+                                <div class="moto-widget moto-widget-row__column moto-cell col-sm-9 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+
+                                    <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="aaaa" data-animation="">
+                                        <div class="moto-widget-text-content moto-widget-text-editable"><h2 class="moto-text_system_6">ASSORTMENT OF OUR HOOKAHS</h2></div>
+                                    </div>
+
+
+
+                                    <div data-widget-id="wid_1542027809_pcmk4n15w" class="moto-widget moto-widget-divider moto-preset-default moto-align-left moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto  " data-widget="divider_horizontal" data-preset="default">
+                                        <hr class="moto-widget-divider-line" style="max-width:100%;width:80px;">
+                                    </div>
+
+
+
+                                    <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="aaaa" data-animation="">
+                                        <div class="moto-widget-text-content moto-widget-text-editable"><p class="moto-text_normal">Choose one of our delicious house blends or mix and match from nearly 100 different flavors to create your own. Each customer is provided a pot of complimentary Moroccan Mint Tea or water to enjoy with your hookah.</p></div>
+                                    </div>
+
+
+                                </div>
+
+
+
+                                <div class="moto-widget moto-widget-row__column moto-cell col-sm-3 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="moto-widget moto-widget-row row-fixed moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-grid-type="sm" data-widget="row" data-spacing="aaaa" style="" data-bg-position="left top">
+
+
+                        <div class="container-fluid">
+                            <div class="row" data-container="container">
+
+                                @foreach (Offer offer in Model.Where(t=>t.FinishDate > DateTime.Now))
+                                {
+
+                                    <div class="moto-widget moto-widget-row__column moto-cell col-sm-4 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+                                        <div data-widget-id="wid_1542028392_0a83u1lwx" class="moto-widget moto-widget-image moto-preset-default moto-align-center moto-spacing-top-medium moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto  " data-widget="image">
+                                            <span class="moto-widget-image-link">
+                                                <img data-src="/mt-demo/74300/74314/mt-content/uploads/2018/11/mt-1616-offers-img-1.jpg" class="moto-widget-image-picture lazyload" data-id="272" title="" alt="">
+                                            </span>
+                                        </div>
+                                        <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="aasa" data-animation="">
+                                            <div class="moto-widget-text-content moto-widget-text-editable">
+                                                <h3 class="moto-text_system_7" style="text-align: center;"><a target="_self" data-action="url" class="moto-link" href="#">@offer.Title</a></h3>
+                                                <p class="moto-text_normal" style="text-align: center;">&nbsp;</p>
+                                                <p class="moto-text_normal" style="text-align: center;">@offer.Description</p>
+                                            </div>
+                                        </div>
+                                        <div data-widget-id="wid_1542028455_bxrlrgjns" class="moto-widget moto-widget-button moto-preset-default moto-align-center moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto " data-widget="button">
+                                            <a href="#" data-action="popup" data-popup-id="9" class="moto-widget-button-link moto-size-medium moto-link"><span class="fa moto-widget-theme-icon"></span> <span class="moto-widget-button-label">BOOK NOW</span></a>
+                                        </div>
+                                    </div>
+
+
+                                }
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    @*<div class="moto-widget moto-widget-row row-fixed moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-grid-type="sm" data-widget="row" data-spacing="aaaa" style="" data-bg-position="left top">
+
+
+                            <div class="container-fluid">
+                                <div class="row" data-container="container">
+
+
+                                    <div class="moto-widget moto-widget-row__column moto-cell col-sm-4 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+                                        <div data-widget-id="wid_1542028392_0a83u1lwx" class="moto-widget moto-widget-image moto-preset-default moto-align-center moto-spacing-top-medium moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto  " data-widget="image">
+                                            <span class="moto-widget-image-link">
+                                                <img data-src="/mt-demo/74300/74314/mt-content/uploads/2018/11/mt-1616-offers-img-1.jpg" class="moto-widget-image-picture lazyload" data-id="272" title="" alt="">
+                                            </span>
+                                        </div><div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="aasa" data-animation="">
+                                            <div class="moto-widget-text-content moto-widget-text-editable"><h3 class="moto-text_system_7" style="text-align: center;"><a target="_self" data-action="url" class="moto-link" href="#">ASSORTED 12 INCH HOOKAH</a></h3><p class="moto-text_normal" style="text-align: center;">&nbsp;</p><p class="moto-text_normal" style="text-align: center;">Special smoking pipe and scientific design</p></div>
+                                        </div><div data-widget-id="wid_1542028455_bxrlrgjns" class="moto-widget moto-widget-button moto-preset-default moto-align-center moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto " data-widget="button">
+                                            <a href="#" data-action="popup" data-popup-id="9" class="moto-widget-button-link moto-size-medium moto-link"><span class="fa moto-widget-theme-icon"></span> <span class="moto-widget-button-label">BOOK NOW</span></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="moto-widget moto-widget-row__column moto-cell col-sm-4 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+
+                                        <div data-widget-id="wid_1542028875_lfnf8f8n6" class="moto-widget moto-widget-image moto-preset-default moto-align-center moto-spacing-top-medium moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto  " data-widget="image">
+                                            <span class="moto-widget-image-link">
+                                                <img data-src="/mt-demo/74300/74314/mt-content/uploads/2018/11/mt-1616-offers-img-2.jpg" class="moto-widget-image-picture lazyload" data-id="271" title="" alt="">
+                                            </span>
+                                        </div>
+
+
+
+                                        <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="aasa" data-animation="">
+                                            <div class="moto-widget-text-content moto-widget-text-editable"><h3 class="moto-text_system_7" style="text-align: center;"><a target="_self" data-action="url" class="moto-link" href="#">BAZAAR 12 INCH BLACK HOOKAH</a></h3><p class="moto-text_normal" style="text-align: center;">&nbsp;</p><p class="moto-text_normal" style="text-align: center;">Round base shape, refreshing hookah</p></div>
+                                        </div>
+
+
+
+                                        <div data-widget-id="wid_1542028875_8y3gpbbea" class="moto-widget moto-widget-button moto-preset-default moto-align-center moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto " data-widget="button">
+                                            <a href="#" data-action="popup" data-popup-id="9" class="moto-widget-button-link moto-size-medium moto-link"><span class="fa moto-widget-theme-icon"></span> <span class="moto-widget-button-label">BOOK NOW</span></a>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="moto-widget moto-widget-row__column moto-cell col-sm-4 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+                                        <div data-widget-id="wid_1542028874_z8zjgi16h" class="moto-widget moto-widget-image moto-preset-default moto-align-center moto-spacing-top-medium moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto  " data-widget="image">
+                                            <span class="moto-widget-image-link">
+                                                <img data-src="/mt-demo/74300/74314/mt-content/uploads/2018/11/mt-1616-offers-img-3.jpg" class="moto-widget-image-picture lazyload" data-id="273" title="" alt="">
+                                            </span>
+                                        </div>
+                                        <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="aasa" data-animation="">
+                                            <div class="moto-widget-text-content moto-widget-text-editable"><h3 class="moto-text_system_7" style="text-align: center;"><a target="_self" data-action="url" class="moto-link" href="#">BASEMENT BAZAAR 10 INCH HOOKAH</a></h3><p class="moto-text_normal" style="text-align: center;">&nbsp;</p><p class="moto-text_normal" style="text-align: center;">Glass product, refreshing hookah</p></div>
+                                        </div>
+                                        <div data-widget-id="wid_1542028874_u2y218qte" class="moto-widget moto-widget-button moto-preset-default moto-align-center moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto " data-widget="button">
+                                            <a href="#" data-action="popup" data-popup-id="9" class="moto-widget-button-link moto-size-medium moto-link"><span class="fa moto-widget-theme-icon"></span> <span class="moto-widget-button-label">BOOK NOW</span></a>
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="moto-widget moto-widget-row row-fixed moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-grid-type="sm" data-widget="row" data-spacing="aaaa" style="" data-bg-position="left top">
+
+
+                            <div class="container-fluid">
+                                <div class="row" data-container="container">
+
+
+                                    <div class="moto-widget moto-widget-row__column moto-cell col-sm-4 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+
+                                        <div data-widget-id="wid_1542028957_ph9l8q16k" class="moto-widget moto-widget-image moto-preset-default moto-align-center moto-spacing-top-medium moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto  " data-widget="image">
+                                            <span class="moto-widget-image-link">
+                                                <img data-src="/mt-demo/74300/74314/mt-content/uploads/2018/11/mt-1616-offers-img-4.jpg" class="moto-widget-image-picture lazyload" data-id="274" title="" alt="">
+                                            </span>
+                                        </div>
+
+
+
+                                        <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="aasa" data-animation="">
+                                            <div class="moto-widget-text-content moto-widget-text-editable"><h3 class="moto-text_system_7" style="text-align: center;"><a target="_self" data-action="url" class="moto-link" href="#">BLACK GLASS HOOKAH</a></h3><p class="moto-text_normal" style="text-align: center;">&nbsp;</p><p class="moto-text_normal" style="text-align: center;">Special smoking pipe, refreshing hookah</p></div>
+                                        </div>
+                                        <div data-widget-id="wid_1542028957_j9ql0vpf6" class="moto-widget moto-widget-button moto-preset-default moto-align-center moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto " data-widget="button">
+                                            <a href="#" data-action="popup" data-popup-id="9" class="moto-widget-button-link moto-size-medium moto-link"><span class="fa moto-widget-theme-icon"></span> <span class="moto-widget-button-label">BOOK NOW</span></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="moto-widget moto-widget-row__column moto-cell col-sm-4 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+
+                                        <div data-widget-id="wid_1542028957_m0u79uc9f" class="moto-widget moto-widget-image moto-preset-default moto-align-center moto-spacing-top-medium moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto  " data-widget="image">
+                                            <span class="moto-widget-image-link">
+                                                <img data-src="/mt-demo/74300/74314/mt-content/uploads/2018/11/mt-1616-offers-img-5.jpg" class="moto-widget-image-picture lazyload" data-id="275" title="" alt="">
+                                            </span>
+                                        </div>
+
+
+
+                                        <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="aasa" data-animation="">
+                                            <div class="moto-widget-text-content moto-widget-text-editable"><h3 class="moto-text_system_7" style="text-align: center;"><a target="_self" data-action="url" class="moto-link" href="#">GLASS HOOKAH</a></h3><p class="moto-text_normal" style="text-align: center;">&nbsp;</p><p class="moto-text_normal" style="text-align: center;">Round base shape, scientific design</p></div>
+                                        </div>
+
+                                        <div data-widget-id="wid_1542028957_x3p0zt5nt" class="moto-widget moto-widget-button moto-preset-default moto-align-center moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto " data-widget="button">
+                                            <a href="#" data-action="popup" data-popup-id="9" class="moto-widget-button-link moto-size-medium moto-link"><span class="fa moto-widget-theme-icon"></span> <span class="moto-widget-button-label">BOOK NOW</span></a>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="moto-widget moto-widget-row__column moto-cell col-sm-4 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+
+                                        <div data-widget-id="wid_1542028957_pdx7s80uv" class="moto-widget moto-widget-image moto-preset-default moto-align-center moto-spacing-top-medium moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto  " data-widget="image">
+                                            <span class="moto-widget-image-link">
+                                                <img data-src="/mt-demo/74300/74314/mt-content/uploads/2018/11/mt-1616-offers-img-6.jpg" class="moto-widget-image-picture lazyload" data-id="276" title="" alt="">
+                                            </span>
+                                        </div>
+
+
+
+                                        <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="aasa" data-animation="">
+                                            <div class="moto-widget-text-content moto-widget-text-editable"><h3 class="moto-text_system_7" style="text-align: center;"><a target="_self" data-action="url" class="moto-link" href="#">TRANSPARENT HOOKAH</a></h3><p class="moto-text_normal" style="text-align: center;">&nbsp;</p><p class="moto-text_normal" style="text-align: center;">Round base shape, glass product.</p></div>
+                                        </div>
+
+
+
+                                        <div data-widget-id="wid_1542028957_d9oavsolp" class="moto-widget moto-widget-button moto-preset-default moto-align-center moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto " data-widget="button">
+                                            <a href="#" data-action="popup" data-popup-id="9" class="moto-widget-button-link moto-size-medium moto-link"><span class="fa moto-widget-theme-icon"></span> <span class="moto-widget-button-label">BOOK NOW</span></a>
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

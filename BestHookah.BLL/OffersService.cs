@@ -3,30 +3,30 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
-using System.Web.Mvc;
+using System.Threading.Tasks;
 using BestHookah.DAL;
 
 namespace BestHookah.BLL
 {
-    public class GalleryService
+    public class OffersService
     {
-        public List<GalleryItem> GetGalleryItem()
+        public List<Offer> GetOffersList()
         {
             using (ModelEntity db = new ModelEntity())
             {
-                return db.GalleryItems.ToList();
+                return db.Offers.ToList();
             }
         }
 
-        public bool CreateGalleryItem(GalleryItem galleryItem, out string message)
+        public bool CreateOffer(Offer offer, out string message)
         {
             using (ModelEntity db = new ModelEntity())
             {
                 try
                 {
-                    db.GalleryItems.Add(galleryItem);
+                    db.Offers.Add(offer);
                     db.SaveChanges();
-                    message = "Фотография добавлена успешно";
+                    message = "Предложение добавлено успешно";
                     return true;
                 }
                 catch (Exception ex)
@@ -37,15 +37,15 @@ namespace BestHookah.BLL
             }
         }
 
-        public bool EditGalleryItem(GalleryItem galleryItem, out string message)
+        public bool EditOffer(Offer offer, out string message)
         {
             using (ModelEntity db = new ModelEntity())
             {
                 try
                 {
-                    db.Entry(galleryItem).State = EntityState.Modified;                  
+                    db.Entry(offer).State = EntityState.Modified;
                     db.SaveChanges();
-                    message = "Фотография изменена успешно";
+                    message = "Предложение изменено успешно";
                     return true;
                 }
                 catch (Exception ex)
@@ -56,17 +56,17 @@ namespace BestHookah.BLL
             }
         }
 
-        public bool DeleteGalleryItem(GalleryItem galleryItem, out string message)
+        public bool DeleteOffer(Offer offer, out string message)
         {
             using (ModelEntity db = new ModelEntity())
             {
                 try
                 {
-                    var f = db.GalleryItems.FirstOrDefault(t => t.GalleryItemId == galleryItem.GalleryItemId);
+                    var f = db.Offers.FirstOrDefault(t => t.OfferId == offer.OfferId);
 
-                    db.GalleryItems.Remove(f);
+                    db.Offers.Remove(f);
                     db.SaveChanges();
-                    message = "Фотография удалена успешно";
+                    message = "Предложение удалено успешно";
                     return true;
                 }
                 catch (Exception ex)
@@ -77,5 +77,4 @@ namespace BestHookah.BLL
             }
         }
     }
-    
 }
