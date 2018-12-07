@@ -26,5 +26,35 @@ namespace BestHookah.Controllers
             OffersService service = new OffersService();
             return View(service.GetOffersList());
         }
+
+        public ActionResult Reservation()
+        {
+            return View();
+        }
+
+        public ActionResult ContactUs()
+        {
+            return View();
+        }
+
+        public ActionResult AboutUs()
+        {
+            return View();
+        }
+
+        public ActionResult Events()
+        {
+            return View();
+        }
+
+        public ActionResult Blog()
+        {
+            return View();
+        }
+
+        public ActionResult HookahBarDrinks()
+        {
+            return View();
+        }
     }
 }

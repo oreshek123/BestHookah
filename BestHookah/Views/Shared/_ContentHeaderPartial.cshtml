@@ -33,26 +33,26 @@
                                                 <a href="@Url.Action("Index","Home")" data-action="page" class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link">Home</a>
                                             </li>
                                             <li class="moto-widget-menu-item moto-widget-menu-item-has-submenu">
-                                                <a href="../about-us/index.html" data-action="page" class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-widget-menu-link-submenu moto-link">About us<span class="fa moto-widget-menu-link-arrow"></span></a>
+                                                <a href="@Url.Action("AboutUs","Content")" data-action="page" class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-widget-menu-link-submenu moto-link">About us<span class="fa moto-widget-menu-link-arrow"></span></a>
                                                 <ul class="moto-widget-menu-sublist">
                                                     <li class="moto-widget-menu-item moto-widget-menu-item-has-submenu">
                                                         <a href="@Url.Action("Menu","Content")" class="moto-widget-menu-link moto-widget-menu-link-level-2 moto-widget-menu-link-submenu moto-link">Menu<span class="fa moto-widget-menu-link-arrow"></span></a>
                                                         <ul class="moto-widget-menu-sublist">
                                                             <li class="moto-widget-menu-item">
-                                                                <a href="../hookah-bar-drinks/index.html" data-action="page" class="moto-widget-menu-link moto-widget-menu-link-level-3 moto-link">Hookah Bar &amp; Drinks</a>
+                                                                <a href="@Url.Action("HookahBarDrinks","Content")" data-action="page" class="moto-widget-menu-link moto-widget-menu-link-level-3 moto-link">Hookah Bar &amp; Drinks</a>
                                                             </li>
                                                         </ul>
                                                     </li>
                                                     <li class="moto-widget-menu-item moto-widget-menu-item-has-submenu">
-                                                        <a href="../events/index.html" data-action="page" class="moto-widget-menu-link moto-widget-menu-link-level-2 moto-widget-menu-link-submenu moto-link">Events<span class="fa moto-widget-menu-link-arrow"></span></a>
+                                                        <a href="@Url.Action("Events","Content")" data-action="page" class="moto-widget-menu-link moto-widget-menu-link-level-2 moto-widget-menu-link-submenu moto-link">Events<span class="fa moto-widget-menu-link-arrow"></span></a>
                                                         <ul class="moto-widget-menu-sublist">
                                                             <li class="moto-widget-menu-item">
-                                                                <a href="../blog/index.html" data-action="blog.index" class="moto-widget-menu-link moto-widget-menu-link-level-3 moto-link">Blog</a>
+                                                                <a href="@Url.Action("Blog","Content")" data-action="blog.index" class="moto-widget-menu-link moto-widget-menu-link-level-3 moto-link">Blog</a>
                                                             </li>
                                                         </ul>
                                                     </li>
                                                     <li class="moto-widget-menu-item">
-                                                        <a href="../contact-us/index.html" data-action="page" class="moto-widget-menu-link moto-widget-menu-link-level-2 moto-link">Contacts</a>
+                                                        <a href="@Url.Action("ContactUs","Content")" data-action="page" class="moto-widget-menu-link moto-widget-menu-link-level-2 moto-link">Contacts</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -61,16 +61,35 @@
                                                 <a href="@Url.Action("Menu","Content")" class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link">Menu</a>
                                             </li>
                                             <li class="moto-widget-menu-item">
-                                                <a href="@Url.Action("Gallery","Content")"  class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link">Gallery</a>
+                                                <a href="@Url.Action("Gallery","Content")" class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link">Gallery</a>
                                             </li>
                                             <li class="moto-widget-menu-item">
                                                 <a href="@Url.Action("Offers","Content")" data-action="page" class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link">Offers</a>
                                             </li>
                                             <li class="moto-widget-menu-item">
-                                                <a href="../reservation/index.html" data-action="page" class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link">Reservation</a>
+                                                <a href="@Url.Action("Reservation","Content")" data-action="page" class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link">Reservation</a>
                                             </li>
                                             <li class="moto-widget-menu-item">
-                                                <a href="../contact-us/index.html" data-action="page" class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link">Contact us</a>
+                                                <a href="@Url.Action("ContactUs","Content")" data-action="page" class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link">Contact us</a>
+                                            </li>
+
+
+                                            <li class="moto-widget-menu-item moto-widget-menu-item-has-submenu">
+                                                <a href="@Url.Action("ReservationList","Admin")" data-action="page" class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-widget-menu-link-submenu moto-link">Admin<span class="fa moto-widget-menu-link-arrow"></span></a>
+                                                <ul class="moto-widget-menu-sublist">
+                                                    <li class="moto-widget-menu-item">
+                                                        <a href="@Url.Action("ReservationList","Admin")" class="moto-widget-menu-link moto-widget-menu-link-level-2 moto-widget-menu-link-submenu moto-link">Reservation List</a>
+                                                    </li>
+                                                    <li class="moto-widget-menu-item">
+                                                        <a href="@Url.Action("Settings","Admin")" data-action="page" class="moto-widget-menu-link moto-widget-menu-link-level-2 moto-widget-menu-link-submenu moto-link">Settings</a>
+                                                    </li>
+                                                    <li class="moto-widget-menu-item">
+                                                        <a href="@Url.Action("GalleryList","Admin")" data-action="page" class="moto-widget-menu-link moto-widget-menu-link-level-2 moto-link">Gallery List</a>
+                                                    </li>
+                                                    <li class="moto-widget-menu-item">
+                                                        <a href="@Url.Action("OffersList","Admin")" data-action="page" class="moto-widget-menu-link moto-widget-menu-link-level-2 moto-link">Offers List</a>
+                                                    </li>
+                                                </ul>
                                             </li>
                                         </ul>
                                     </div>

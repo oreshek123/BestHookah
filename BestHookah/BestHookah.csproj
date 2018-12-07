@@ -51,10 +51,15 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="EPPlus, Version=4.5.2.1, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.4.5.2.1\lib\net40\EPPlus.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -1749,6 +1754,7 @@
     <Content Include="Content\fontawesome-free-5.5.0-web\webfonts\fa-solid-900.ttf" />
     <Content Include="Content\fontawesome-free-5.5.0-web\webfonts\fa-solid-900.woff" />
     <Content Include="Content\fontawesome-free-5.5.0-web\webfonts\fa-solid-900.woff2" />
+    <Content Include="Files\Reservations.xlsx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -1795,6 +1801,16 @@
     <Content Include="Views\Admin\EditOffer.cshtml" />
     <Content Include="Views\Admin\DetailsOffer.cshtml" />
     <Content Include="Views\Admin\DeleteOffer.cshtml" />
+    <Content Include="Views\Admin\Settings.cshtml" />
+    <Content Include="Views\Content\Reservation.cshtml" />
+    <Content Include="Views\Admin\EditReservation.cshtml" />
+    <Content Include="Views\Admin\DeleteReservation.cshtml" />
+    <Content Include="Views\Admin\DetailsReservation.cshtml" />
+    <Content Include="Views\Content\ContactUs.cshtml" />
+    <Content Include="Views\Content\AboutUs.cshtml" />
+    <Content Include="Views\Content\Events.cshtml" />
+    <Content Include="Views\Content\Blog.cshtml" />
+    <Content Include="Views\Content\HookahBarDrinks.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

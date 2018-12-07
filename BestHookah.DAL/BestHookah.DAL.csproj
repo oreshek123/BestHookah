@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="GalleryItem.cs" />
     <Compile Include="ModelEntity.cs" />
+    <Compile Include="Notification.cs" />
     <Compile Include="Offer.cs" />
     <Compile Include="RezervTable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

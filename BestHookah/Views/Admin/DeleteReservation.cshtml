@@ -1,0 +1,108 @@
+﻿@model BestHookah.DAL.RezervTable
+
+@{
+    ViewBag.Title = "DeleteReservation";
+    Layout = "~/Views/Shared/_LayoutContent.cshtml";
+}
+
+<section id="section-content" class="content page-15 moto-section" data-widget="section" data-container="section">
+    <div class="moto-widget moto-widget-block moto-bg-color2_3 moto-spacing-top-large moto-spacing-right-auto moto-spacing-bottom-large moto-spacing-left-auto" data-widget="block" data-spacing="lala" style="background-image:url(../../Content/mt-demo/74300/74314/mt-content/uploads/2018/11/mt-1616-content-bg-1.jpg);background-position:center;background-repeat:no-repeat;background-size:cover;" data-bg-image="2018/11/mt-1616-content-bg-1.jpg" data-bg-position="center">
+
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="moto-cell col-sm-12" data-container="container">
+
+
+                    <div class="moto-widget moto-widget-row row-fixed moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-grid-type="sm" data-widget="row" data-spacing="aaaa" style="" data-bg-position="left top">
+
+
+                        <div class="container-fluid">
+                            <div class="row" data-container="container">
+
+
+                                <div class="moto-widget moto-widget-row__column moto-cell col-sm-12 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+
+                                    <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="aaaa" data-animation="">
+                                        <div class="moto-widget-text-content moto-widget-text-editable"><h1 class="moto-text_system_5">DELETE RESERVATION</h1></div>
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container-fluid">
+<div class="col-md-offset-3 col-md-6">
+
+    <h3 class="h3">Are you sure you want to delete this?</h3>
+    <div>
+        <h4>RezervTable</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.ClientName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ClientName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Phone)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Phone)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Message)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Message)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DateOfReservation)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DateOfReservation)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "ReservationList")
+            </div>
+        }
+    </div>
+</div>
+</div>
